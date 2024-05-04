@@ -1,0 +1,45 @@
+[package]
+name = "brp-web"
+version = "0.1.0"
+edition = "2021"
+default-run = "brp-web"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = { version = "0.7.5", features = ["form", "multipart", "query"] }
+serde = { version = "1.0.197", features = ["derive"] }
+tokio = { version = "1.36.0", features = ["macros", "rt-multi-thread"] }
+tower-http = { version = "0.5.2", features = ["trace", "fs"] }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+sqlx = { version = "0.7", features = [
+  "runtime-tokio",
+  "tls-rustls",
+  "sqlite",
+  "macros",
+  "time",
+  "chrono",
+] }
+
+tower-livereload = "0.9.2"
+maud = { version = "0.26.0", features = ["axum"] }
+tower-sessions = { version = "0.11.0", features = ["signed"] }
+tower-sessions-redis-store = "0.11.0"
+serde_variant = "0.1.2"
+chrono = { version = "0.4.37", features = ["serde"] }
+time = "0.3.34"
+rand = "0.8.5"
+sha256 = "1.5.0"
+serde_json = "1.0.115"
+oauth2 = "4.4.2"
+thiserror = "1.0.58"
+reqwest = { version = "0.12.3", features = ["json"] }
+url-escape = "0.1.1"
+axum-extra = { version = "0.9.3", features = ["cookie-private", "cookie"] }
+cookie = "0.18.1"
+hex = "0.4.3"
+axum-macros = "0.4.1"
+lazy_static = "1.4.0"
+serde-xml-rs = "0.6.0"
+dotenv = "0.15.0"
+tracing = "0.1.40"

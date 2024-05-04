@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS readings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL,
+    reading TEXT NOT NULL,
+    idx INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS dates (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER NOT NULL UNIQUE,
+    start_date DATE NOT NULL,
+    offset INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

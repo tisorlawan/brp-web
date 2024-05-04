@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "flowbite": "^2.3.0",
+        "tailwindcss": "^3.4.3",
+        "tailwindcss-opentype": "^1.1.0",
+        "uglify-js": "^3.17.4"
+    },
+    "devDependencies": {
+        "tailwind-scrollbar": "^3.1.0"
+    }
+}

@@ -1,0 +1,7 @@
+/target
+/node_modules
+/assets/dist
+database.sqlite
+database.sqlite*
+/chapters
+.env
